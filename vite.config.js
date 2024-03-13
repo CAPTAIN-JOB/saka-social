@@ -1,5 +1,9 @@
 import * as dotenv from "dotenv";
 
+import path from "path";
+import react from "@vitejs/plugin-react";
+import { defineConfig } from "vite";
+
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
@@ -44,5 +48,11 @@ export default defineConfig({
 		"process.env.DFX_NETWORK": JSON.stringify(process.env.DFX_NETWORK),
 		"process.env.II_URL": JSON.stringify(internetIdentityUrl),
 		global: "globalThis",
+	},
+	plugins: [react()],
+	resolve: {
+		alias: {
+			"@": path.resolve(__dirname, "./src"),
+		},
 	},
 });
