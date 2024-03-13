@@ -15,10 +15,11 @@
 		"isolatedModules": true,
 		"noEmit": true,
 		"jsx": "react-jsx",
-		"types": ["vite/client"],
+		"types": ["vite/client", "node"],
 		"baseUrl": "./",
 		"paths": {
-			"*": ["node_modules/*", "src/*"]
+			"*": ["node_modules/*", "src/*"],
+			"@/*": ["./src/*"]
 		}
 		// "nclude": ["src/main.tsx", "src"]
 	}
