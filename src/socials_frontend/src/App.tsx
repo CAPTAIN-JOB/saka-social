@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "../index.css";
+import "./index.css";
 
 import { LoginButton } from "./components/LoginButton";
 import Principal from "./components/Principal";

@@ -1,4 +1,4 @@
-import "../index.css";
+import "./index.css";
 
 import Actor from "./ic/Actor";
 import App from "./App";
