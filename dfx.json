@@ -1,27 +1,34 @@
 {
-  "canisters": {
-    "socials_backend": {
-      "candid": "src/socials_backend/socials_backend.did",
-      "package": "socials_backend",
-      "type": "rust"
-    },
-    "socials_frontend": {
-      "dependencies": [
-        "socials_backend"
-      ],
-      "source": [
-        "src/socials_frontend/dist"
-      ],
-      "type": "assets",
-      "workspace": "socials_frontend"
-    }
-  },
-  "defaults": {
-    "build": {
-      "args": "",
-      "packtool": ""
-    }
-  },
-  "output_env_file": ".env",
-  "version": 1
+	"canisters": {
+		"internet_identity": {
+			"type": "custom",
+			"candid": "https://github.com/dfinity/internet-identity/releases/download/release-2023-11-17/internet_identity.did",
+			"wasm": "https://github.com/dfinity/internet-identity/releases/download/release-2023-11-17/internet_identity_dev.wasm.gz",
+			"remote": {
+				"id": {
+					"ic": "rdmx6-jaaaa-aaaaa-aaadq-cai"
+				}
+			},
+			"frontend": {}
+		},
+		"socials_backend": {
+			"candid": "src/socials_backend/socials_backend.did",
+			"package": "socials_backend",
+			"type": "rust"
+		},
+		"socials_frontend": {
+			"dependencies": ["socials_backend"],
+			"source": ["src/socials_frontend/dist"],
+			"type": "assets",
+			"workspace": "socials_frontend"
+		}
+	},
+	"defaults": {
+		"build": {
+			"args": "",
+			"packtool": ""
+		}
+	},
+	"output_env_file": ".env",
+	"version": 1
 }
