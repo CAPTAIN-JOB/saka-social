@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
+import "../index.css";
 
-import { Counter } from "./components/Counter";
 import { LoginButton } from "./components/LoginButton";
 import Principal from "./components/Principal";
 import { useBackend } from "./ic/Actor";
@@ -35,7 +35,6 @@ function App() {
 			</div>
 			<LoginButton />
 			<Principal principal={principal} />
-			{/* <Counter /> */}
 		</div>
 	);
 }
