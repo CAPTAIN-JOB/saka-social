@@ -17,6 +17,7 @@ If you want to start working on your project right away, you might want to try t
 
 ```bash
 cd socials/
+npm install 
 dfx help
 dfx canister --help
 ```
