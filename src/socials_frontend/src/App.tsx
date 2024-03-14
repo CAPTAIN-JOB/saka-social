@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./index.css";
+import "../index.css";
 
 import { LoginButton } from "./components/LoginButton";
 import Principal from "./components/Principal";
@@ -24,12 +24,7 @@ function App() {
 	}, [backend, identity, principal]);
 
 	return (
-		<div className="flex flex-col items-center w-full gap-5 p-10 font-sans text-2xl italic md:items-start md:gap-10 md:text-6xl">
-			<img
-				src="/ic.svg"
-				alt="Internet Computer"
-				className="w-40 mb-5 md:mb-0 md:w-96"
-			/>
+		<div className=" min-h-screen flex  flrx row justify-center items-center p-24 text-sm italic md:items-start md:gap-10 md:text-sm">
 			<div className="text-center">
 				{identity ? "You are logged in." : "You are not logged in."}
 			</div>

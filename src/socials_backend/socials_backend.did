@@ -1,5 +1,23 @@
-service : () -> {
-  "whoami" : () -> (text) query;
+
+type customTask = record {
+    // Define the structure of a custom task
+    title: text;
+    description: text;
+    status: bool;
+    important: bool;
+};
+
+service socials_backend : {
+  add_user: (text) -> ();
+  add_skill_for_user: (text) -> ();
+  update_skill_for_user: (text, text, text, float64) -> ();
+  delete_skill_for_user: (text, text) -> ();
+  verify_skill_for_user: (text, text) -> ();
+  add_job: (title: text, description: text, requirements: vec text, employer: text) -> ();
+  get_available_jobs: (text) -> (vec customTask) query;
+  rate_user: (text, float64) -> ();
+   "whoami" : () -> (text) query;
   "get_counter" : () -> (nat32) query;
   "inc_counter" : () -> (nat32);
+  
 };
