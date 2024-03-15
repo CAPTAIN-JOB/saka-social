@@ -1,4 +1,5 @@
 import { PrincipalPill } from "./PrincipalPill";
+// import Spinner from "./Spinner";
 import { useInternetIdentity } from "ic-use-internet-identity";
 
 export default function Principal({ principal }: { principal?: string }) {
@@ -12,7 +13,10 @@ export default function Principal({ principal }: { principal?: string }) {
 			{principal ? (
 				<PrincipalPill principal={principal} />
 			) : (
-				<div className="inline-block px-5 ml-3 rounded bg-zinc-600"></div>
+				<div className="inline-block px-5 ml-3 rounded bg-zinc-600">
+					{/* <Spinner className="w-4 h-8 md:w-10 md:h-16" /> */}
+					{/* console.log({principal}) */}
+				</div>
 			)}
 		</div>
 	);

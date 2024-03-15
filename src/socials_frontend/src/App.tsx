@@ -24,13 +24,15 @@ function App() {
 	}, [backend, identity, principal]);
 
 	return (
-		<div className=" min-h-screen flex  flrx row justify-center items-center p-24 text-sm italic md:items-start md:gap-10 md:text-sm">
-			<div className="text-center">
-				{identity ? "You are logged in." : "You are not logged in."}
+		<main className=" min-h-screen flex  flex-row justify-center items-center gap-6">
+			<div className=" text-sm btext-old md:items-start md:gap-10 md:text-sm">
+				<div className="text-center">
+					{identity ? "You are logged in." : "You are not logged in."}
+				</div>
+				<LoginButton />
+				<Principal principal={principal} />
 			</div>
-			<LoginButton />
-			<Principal principal={principal} />
-		</div>
+		</main>
 	);
 }
 

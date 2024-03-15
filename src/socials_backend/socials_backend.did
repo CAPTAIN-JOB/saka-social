@@ -6,8 +6,12 @@ type customTask = record {
     status: bool;
     important: bool;
 };
+// service : () -> {
+//   "whoami" : () -> (text) query;
 
-service socials_backend : {
+// };
+
+service  social_backend: () -> {
   add_user: (text) -> ();
   add_skill_for_user: (text) -> ();
   update_skill_for_user: (text, text, text, float64) -> ();
@@ -16,8 +20,47 @@ service socials_backend : {
   add_job: (title: text, description: text, requirements: vec text, employer: text) -> ();
   get_available_jobs: (text) -> (vec customTask) query;
   rate_user: (text, float64) -> ();
-   "whoami" : () -> (text) query;
-  "get_counter" : () -> (nat32) query;
-  "inc_counter" : () -> (nat32);
-  
+  "whoami" : () -> (text) query;
+
+
 };
+
+// type User = record {
+//   name : text;
+//   skills : text;
+// };
+
+// type Skill = record {
+//   name : text;
+//   description : text;
+//   proficiency : f64;
+//   verified : bool;
+// };
+
+// type Job = record {
+//   title : text;
+//   description : text;
+//   requirements : text;
+//   employer : text;
+// };
+// type Result = variant { Ok : Activity; Err : Error };
+// type Result_1 = variant { Ok; Err : Error };
+// type Result_2 = variant { Ok : get_available_jobs; Err : Error };
+// type Result_3 = variant { Ok : vec get_available_jobs; Err : Error };  
+
+
+// service : {
+//   // add_user : (text) -> ()  query;
+//   // add_skill_for_user : (text, Skill) -> (opt text) query;
+//   // update_skill_for_user : (text, text, text, float) -> (opt text) query ;
+//   // delete_skill_for_user : (text, text) -> (opt text) query;
+//   // verify_skill_for_user : (text, text) -> (opt text) query;
+//   // add_job : (Job) -> () query;
+//   // // // get_location_by_id : () -> (Result_2) query;
+  
+  // rate_user : (text, float) -> () query;
+    // "whoami" : () -> (text) query;
+// };
+
+// 2349094
+// 2349095
